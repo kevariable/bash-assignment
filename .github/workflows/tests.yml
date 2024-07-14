@@ -18,3 +18,4 @@ jobs:
         run: |
           curl -s https://bashunit.typeddevs.com/install.sh | bash
           ./lib/bashunit ./tests/*_test.sh
+          rm -rf ./lib
