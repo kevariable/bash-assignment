@@ -14,8 +14,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: "Install bashunit"
-        run: "curl -s https://bashunit.typeddevs.com/install.sh"
-
       - name: "Test"
-        run: "bashunit ./tests/*_test.sh"
+        run: |
+          "curl -s https://bashunit.typeddevs.com/install.sh"
+          "bashunit ./tests/*_test.sh"
