@@ -2,7 +2,7 @@
 
 read -rp "Which folder you want to cruft? " FOLDER
 
-if [ ! -d "$FOLDER" ]; then
+if [[ ! -d "$FOLDER" ]]; then
   echo "Folder you type is not exists."
   exit 1
 fi
@@ -17,5 +17,5 @@ if [ "${#FILES[@]}" -eq 0 ]; then
 fi
 
 for FILE in "${FILES[@]}"; do
-  rm -i "$FILE";
+  rm "$FILE";
 done
