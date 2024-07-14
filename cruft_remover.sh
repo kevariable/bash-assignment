@@ -9,7 +9,7 @@ fi
 
 read -rp "How many days files should be unmodified for to be considered cruft? " DAY
 
-readarray -t FILES < <(find "$FOLDER" -maxdepth 1 -atime -"$DAY" -type f)
+readarray -t FILES < <(find "$FOLDER" -maxdepth 1 -atime +"$DAY" -type f)
 
 if [ "${#FILES[@]}" -eq 0 ]; then
   echo "The folder of $FOLDER does not contains any file"
