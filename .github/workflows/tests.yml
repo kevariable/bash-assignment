@@ -18,4 +18,4 @@ jobs:
         run: "curl -s https://bashunit.typeddevs.com/install.sh"
 
       - name: "Test"
-        run: "./lib/bashunit ./tests/*_test.sh"
+        run: "bashunit ./tests/*_test.sh"
