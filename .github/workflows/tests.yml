@@ -16,5 +16,5 @@ jobs:
 
       - name: "Test"
         run: |
-          "curl -s https://bashunit.typeddevs.com/install.sh"
-          "bashunit ./tests/*_test.sh"
+          curl -s https://bashunit.typeddevs.com/install.sh | bash
+          ./lib/bashunit ./tests/*_test.sh
